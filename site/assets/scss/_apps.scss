@@ -1,0 +1,16 @@
+
+
+.app-card {
+    transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1) 0s;
+    border-radius: 20px;
+    background: linear-gradient(209.21deg,rgba(var(--bs-body-bg-rgb), .5), rgba(var(--bd-accent-rgb), 0.5) 85%);
+    box-shadow: rgba(70, 111, 171, 0.3) 0px 20px 40px, rgba(0, 0, 0, 0.05) 0px 1px 3px;
+    text-decoration: none;
+    color: inherit;
+
+    &:hover{
+        transform: translateY(-2px);
+        box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 0.5px inset, rgba(23, 0, 102, 0.3) 0px 40px 80px, rgba(0, 0, 0, 0.3) 0px 10px 30px;
+    }
+    
+}

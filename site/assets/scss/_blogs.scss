@@ -1,0 +1,21 @@
+
+
+.blog-card {
+    transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1) 0s;
+    text-decoration: none;
+    color: inherit;
+
+    .row {
+        height: 120px;
+    }
+
+    .row:hover{
+        background: rgba(var(--bs-secondary-color-rgb), 0.1);
+    }
+
+    .full-parent{
+        width: 120px;
+        height: 100px;
+        object-fit: cover;
+    }
+}

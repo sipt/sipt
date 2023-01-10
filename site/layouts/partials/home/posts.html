@@ -1,0 +1,21 @@
+<section class="row g-3 g-md-5 pb-md-5 mb-5 align-items-center">
+  <div class="col-lg-6 d-flex">
+    <div class="masthead-followup-icon d-inline-block mb-3 me-3" style="--bg-rgb: var(--bs-danger-rgb);">
+      {{ partial "icons/blogs-icon.svg" (dict "width" "32" "height" "32") }}
+    </div>
+    <h2 class="display-5 mb-3 fw-semibold lh-sm">Posts</h2>
+  </div>
+  <div class="container">
+    <div class="row align-items-center gx-5 gy-3">
+      {{ range .Pages}}
+        {{- $url := split .Permalink "/" -}}
+        {{- $page_slug := index $url (sub (len $url) 2) -}}
+        {{ if eq $page_slug "posts"}}
+          {{ range .Pages}}
+            {{ partial "card" . }}
+          {{ end }}
+        {{ end }}
+      {{ end }}
+    </div>
+  </div>
+</section>

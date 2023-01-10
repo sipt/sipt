@@ -1,0 +1,13 @@
+<div class="col-lg-6">
+    <a class="blog-card" href="{{.Permalink}}">
+        <div class="row align-items-center border rounded">
+        <div class="col-lg-3">
+            <img src="{{ .Params.cover }}" class="d-block mx-auto full-parent">
+        </div>
+        <div class="col-lg-9 pt-2">
+            <h3>{{ .Title }}</h3>
+            <p>{{ .Description }}</p>
+        </div>
+        </div>
+    </a>
+</div>
