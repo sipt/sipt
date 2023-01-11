@@ -8,10 +8,34 @@ toc: true
 category: blogs
 tags: [flomi]
 ---
-## 概述
+本文使用 [Flomi](https://flomi.sipt.top) 生成 MacOS icns 文件，需要自行下载。
+
+## 快速使用
+
+准备一张 `1024 x 1024` 的图标图片。
+
+点击下载 Pipeline 导出源文件：
+<a href="https://flomi.sipt.top/docs/1.0/assets/resources/generateIconsV2.flomiext" target="_blank">Flomi generate MacOS icns extention</a> , 导入到 Flomi 可以直接使用。
+
+Pipeline 列表右击，点击 `Import...`，选择下载的 extension 文件
+
+![导入 Pipeline](/assets/resource/blogs/01/SCR-20230111-k2l.png)
+
+选中导入的 Pipeline，在主工作区选择 `Sips PNG v2` 的 Stage，配置它的 Environments，点击 `Src File` 输入框后的图标，在文件浏览框里选中 之前准备的 `1024 x 1024` 的图标图片，下面要输出的图标尺寸可以任选
+![配置 Sips PNG v2 Stage Environments](/assets/resource/blogs/01/SCR-20230111-k3g.png)
+
+在主工作区选择 `Iconutil icns v2` 的 Stage，配置它的 Environments，点击 `Save to` 输入框后的图标，选择文件保存路径以及文件名
+
+![配置 Iconutil icns v2 Environments](/assets/resource/blogs/01/SCR-20230111-k3t.png)
+
+点击运行即可
+
+![运行](/assets/resource/blogs/01/SCR-20230111-kjn.png)
+
+## 自建 Pipeline Generate macOS icns
 
 本篇 Pipeline 导出源文件：
-<a href="/docs/{{< param docs_version >}}/assets/resources/generateIconsV2.flomiext" target="_blank">flomi extention</a> 
+<a href="https://flomi.sipt.top/docs/1.0/assets/resources/generateIconsV2.flomiext" target="_blank">flomi extention</a> 
 
 在 MacOS 中，一个 APP 的图标格式为 icns，其中包含了多张不同分辨率的图标，系统会根据当前设备分辨率自动选择。生成步骤：
 
