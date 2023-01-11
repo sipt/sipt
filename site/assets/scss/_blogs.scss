@@ -4,18 +4,33 @@
     transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1) 0s;
     text-decoration: none;
     color: inherit;
-
+    
     .row {
-        height: 120px;
-    }
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
 
-    .row:hover{
-        background: rgba(var(--bs-secondary-color-rgb), 0.1);
+        p {
+            text-overflow: ellipsis;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
     }
 
     .full-parent{
-        width: 120px;
-        height: 100px;
+        width: 100%;
+        height: 100%;
         object-fit: cover;
+    }
+
+    .filter {
+        backdrop-filter: blur(5px);
+        background-color: rgba(var(--bs-body-bg-rgb), 0.5);
+    }
+    .row:hover {
+        background: rgba(var(--bs-secondary-color-rgb), 0.1);
     }
 }
